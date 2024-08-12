@@ -36,7 +36,7 @@ export function HoverBorderGradientDemo() {
         />
       </a>
       <a
-        href="/My_CV.pdf"
+        href="/Önéletrajz.pdf"
         className="relative inline-block"
         target="_blank"
         rel="noopener noreferrer"
@@ -57,7 +57,7 @@ export function HoverBorderGradientDemo() {
         />
       </a>
       <a
-        href="/My_CV.pdf"
+        href="/ResumeENG.pdf"
         className="relative inline-block"
         target="_blank"
         rel="noopener noreferrer"
