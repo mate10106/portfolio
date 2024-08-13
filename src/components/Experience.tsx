@@ -30,9 +30,7 @@ export function Experience() {
       value: "Framework",
       content: (
         <div className="w-full max-lg:text-center overflow-hidden relative h-96 rounded-2xl p-10 text-2xl max-sm:text-sm md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p className="experience--title">
-            Framework <span className="text-amber-500">Experience</span>
-          </p>
+          <p className="experience--title">Framework</p>
           <FrameworkContent />
         </div>
       ),
@@ -52,7 +50,6 @@ export function Experience() {
 const FrontendContent = () => {
   return (
     <div>
-      <h1 className="text-amber-500">Experience</h1>
       <div className="grid grid-cols-2 p-8">
         <div className="flex p-4 items-center gap-2">
           <svg
@@ -147,7 +144,6 @@ const FrontendContent = () => {
 const BackendContent = () => {
   return (
     <div>
-      <h1 className="text-amber-500">Experience</h1>
       <div className="grid grid-cols-2 p-8">
         <div className="flex p-4 items-center gap-2">
           <svg
