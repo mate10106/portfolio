@@ -19,7 +19,7 @@ const About = () => {
       className="opacity-0 space-y-10 text-balance pt-14 max-md:pt-8 mb-14 mt-12"
       id="about"
     >
-      <div>
+      <div className="mb-24">
         <BackgroundGradientDemo />
       </div>
       <div className="flex flex-col items-center">

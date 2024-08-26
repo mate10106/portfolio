@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function HoverBorderGradientDemo() {
   return (
-    <div className="flex items-center gap-16 text-center justify-between max-[380px]:gap-12 border-r border-l border-violet-600 p-4 rounded-2xl shadow-xl">
+    <div className="flex items-center gap-16 text-center justify-between max-[380px]:gap-12 p-4">
       <a href="https://github.com/mate10106" target="_blank">
         <Image
           src="/github-mark-white.png"

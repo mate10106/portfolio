@@ -6,10 +6,6 @@ import { HoverBorderGradientDemo } from "./HoverBorderGradientDemo";
 export function BackgroundGradientDemo() {
   return (
     <div className="flex flex-col items-center gap-14">
-      <h1 className="text-center text-2xl lg:text-4xl text-white font-serif">
-        Hey, My name is{" "}
-        <span className="font-bold text-3xl text-violet-600">Máté Brösztl</span>
-      </h1>
       <div
         id="main-images"
         className="relative spin-border p-4 max-[2700px]:w-64 max-[2700px]:h-64 max-md:self-center"
@@ -22,6 +18,11 @@ export function BackgroundGradientDemo() {
           className="mt-5 object-contain rounded-full scale-125"
         />
       </div>
+      <h1 className="text-center text-2xl lg:text-4xl text-white font-serif">
+        Hey, My name is{" "}
+        <span className="font-bold text-3xl text-violet-600">Máté Brösztl</span>{" "}
+        <br></br>based in Hungary.
+      </h1>
       <HoverBorderGradientDemo />
     </div>
   );
