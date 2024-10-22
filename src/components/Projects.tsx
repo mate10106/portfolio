@@ -22,7 +22,7 @@ const Projects = () => {
       <div id="project" className="opacity-0 p-8">
         <h1 className="font-bold text-4xl mb-4 text-center text-gray-200 font-serif">
           A small selection of{" "}
-          <span className="text-violet-600"> recent project</span>
+          <span className="text-violet-600"> recent projects</span>
         </h1>
         <div className="lg:mt-28 grid grid-cols-2 lg:gap-40 max-lg:grid-cols-1 max-lg:space-y-12 justify-evenly max-[840px]:gap-12">
           {projects.map(

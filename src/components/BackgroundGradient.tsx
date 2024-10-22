@@ -19,7 +19,7 @@ export function BackgroundGradientDemo() {
         />
       </div>
       <h1 className="text-center text-2xl lg:text-4xl text-white font-serif">
-        Hey, My name is{" "}
+        Hey, my name is{" "}
         <span className="font-bold text-3xl text-violet-600">Máté Brösztl</span>{" "}
         <br></br>based in Hungary.
       </h1>
