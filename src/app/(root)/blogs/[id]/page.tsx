@@ -34,9 +34,9 @@ const BlogDetail = () => {
   }, []);
 
   return (
-    <div id="header" className="flex">
+    <div id="header" className="flex py-8">
       <div id="title" className="flex flex-col">
-        <Link href="/blogs" className="absolute z-20 m-4">
+        <Link href="/blogs" className="absolute z-20 m-4 max-sm:hidden">
           <Image
             src="/back-square-svgrepo-com.svg"
             width={22}
