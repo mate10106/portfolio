@@ -8,6 +8,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import TechIcon from "./TechIcon";
+import clsx from "clsx";
 
 const Projects = () => {
   useGSAP(() => {
@@ -82,14 +83,27 @@ const Projects = () => {
                         </div>
                         <X className="flex mx-auto w-5 h-5 text-white/15" />
                         <div>
-                          <Link
-                            href={blogLink}
-                            rel="noopener noreferrer"
-                            className="flex items-center bg-purple-700 rounded-lg h-8 w-[7.2rem] scale-95 hover:scale-100 hover:text-black transition-all duration-300"
-                          >
-                            <BookOpen size={18} className="mx-2" />
-                            <span className="text-sm">Read more</span>
-                          </Link>
+                          {blogLink ? (
+                            <Link
+                              href={blogLink}
+                              rel="noopener noreferrer"
+                              className={clsx(
+                                "flex items-center bg-purple-700 rounded-lg h-8 w-[7.2rem] scale-95 hover:scale-100 hover:text-black transition-all duration-300"
+                              )}
+                            >
+                              <BookOpen size={18} className="mx-2" />
+                              <span className="text-sm">Read more</span>
+                            </Link>
+                          ) : (
+                            <div
+                              className={clsx(
+                                "flex items-center bg-gray-500 rounded-lg h-8 w-[7.2rem] scale-95 cursor-not-allowed text-gray-300"
+                              )}
+                            >
+                              <BookOpen size={18} className="mx-2" />
+                              <span className="text-base">No blog</span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
