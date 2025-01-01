@@ -18,7 +18,7 @@ const Navbar = () => {
       {navigation.map((item) => (
         <Link href={item.url} key={item.id}>
           <div
-            className={`p-5 hover:bg-violet-900 hover:scale-105 rounded-full transition-all duration-150`}
+            className={`scale-95 p-5 text-violet-400 hover:bg-violet-900 hover:text-white hover:scale-105 rounded-full transition-all duration-150`}
           >
             <p>{item.svg}</p>
           </div>

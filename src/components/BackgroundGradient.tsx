@@ -18,9 +18,11 @@ export function BackgroundGradientDemo() {
           className="mt-5 object-contain rounded-full scale-125"
         />
       </div>
-      <h1 className="text-center text-2xl lg:text-4xl text-white font-serif">
+      <h1 className="text-center text-2xl lg:text-4xl text-white font">
         Hey, my name is{" "}
-        <span className="font-bold text-3xl text-violet-600">Máté Brösztl</span>{" "}
+        <span className="font-bold text-3xl text-violet-600 font-sans">
+          Máté Brösztl
+        </span>{" "}
         <br></br>based in Hungary.
       </h1>
       <HoverBorderGradientDemo />

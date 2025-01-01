@@ -23,12 +23,10 @@ const About = () => {
         <BackgroundGradientDemo />
       </div>
       <div className="flex flex-col items-center">
-        <span className="text-base font-semibold text-violet-600">
+        <span className="text-lg font-semibold text-violet-500">
           I constantly try to improve
         </span>
-        <h1 className="font-bold text-4xl text-gray-200 font-serif ">
-          My tech stack
-        </h1>
+        <h1 className="font-bold text-[41px] text-gray-200">My tech stack</h1>
         <Experience />
       </div>
     </div>

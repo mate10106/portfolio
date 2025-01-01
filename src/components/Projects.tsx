@@ -1,12 +1,13 @@
 "use client";
 
 import { projects } from "@/data";
-import { PinContainer } from "@/components/ui/3d-pin";
-import { FaLocationArrow } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
+import { BookOpen, Code as CodeIcon, ExternalLink, X } from "lucide-react";
+
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import TechIcon from "./TechIcon";
 
 const Projects = () => {
   useGSAP(() => {
@@ -20,70 +21,80 @@ const Projects = () => {
   return (
     <div>
       <div id="project" className="opacity-0 p-8">
-        <h1 className="font-bold text-4xl mb-4 text-center text-gray-200 font-serif">
+        <h1 className="font-bold text-4xl mb-4 text-center text-gray-200">
           A small selection of{" "}
-          <span className="text-violet-600"> recent projects</span>
+          <span className="text-violet-600">recent projects</span>
         </h1>
-        <div className="lg:mt-28 grid grid-cols-2 lg:gap-40 max-lg:grid-cols-1 max-lg:space-y-12 justify-evenly max-[840px]:gap-12">
+        <div className="lg:mt-20 max-lg:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto max-lg:w-96">
           {projects.map(
-            ({ id, title, des, img, iconLists, link, livedemo }) => (
+            ({ id, title, des, img, iconLists, link, livedemo, blogLink }) => (
               <div
                 key={id}
-                className="text-white h-[25rem] w-full flex items-center justify-center"
+                className="bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-lg shadow-xl overflow-hidden"
               >
-                <PinContainer title={title}>
-                  <Link
-                    href={livedemo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                      <Image
-                        src={img}
-                        alt={title}
-                        className="z-10 absolute rounded-md hover:scale-90 hover:transition-all duration-200"
-                        width={640}
-                        height={640}
-                      />
+                <Link href={livedemo} target="_blank" rel="noopener noreferrer">
+                  <div className="h-[200px] lg:h-[200px] relative group overflow-hidden">
+                    <Image
+                      src={img}
+                      alt={title}
+                      fill
+                      className="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-50"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <span className="flex gap-2 items-center text-white text-lg font-semibold">
+                        <ExternalLink className="w-5 h-5 text-purple-600 font-bold" />
+                        View Live Site
+                      </span>
                     </div>
-                  </Link>
-                  <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                    {title}
-                  </h1>
-                  <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+                  </div>
+                </Link>
+                <div className="p-6 bg-gradient-to-br from-purple-00 via-purple-900 to-blue-900 text-white h-[18rem]">
+                  <h1 className="font-bold text-xl line-clamp-1">{title}</h1>
+                  <p className="text-sm lg:text-base font-light mt-2 line-clamp-2">
                     {des}
                   </p>
-                  <div className="flex max-[382px]:flex-col max-[382px]:gap-6 items-center justify-between mt-7 mb-3">
-                    <div className="flex items-center">
-                      {iconLists.map((icon, index) => (
-                        <div
-                          key={icon}
-                          className="border border-whte/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                          style={{
-                            transform: `translateX(-${5 * index * 2}px)`,
-                          }}
-                        >
-                          <Image
-                            src={icon}
-                            alt={icon}
-                            className="p-2"
-                            width={68}
-                            height={68}
-                          />
+                  <div className="border-t border-white/15 pt-4 mt-4">
+                    <div className="flex justify-between items-center h-32">
+                      <div className="grid grid-cols-3 gap-4">
+                        {iconLists.map(({ icon, label }, index) => (
+                          <TechIcon key={index} label={label}>
+                            <Image
+                              src={icon}
+                              alt={icon}
+                              className="w-5 h-5"
+                              width={40}
+                              height={40}
+                            />
+                          </TechIcon>
+                        ))}
+                      </div>
+                      <div className="ml-4 space-y-3">
+                        <div>
+                          <Link
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center bg-purple-700 rounded-lg h-8 w-[7.2rem] scale-95 hover:scale-100 hover:text-black transition-all duration-300"
+                          >
+                            <CodeIcon size={18} className="mx-2" />
+                            <span className="text-sm">View Code</span>
+                          </Link>
                         </div>
-                      ))}
+                        <X className="flex mx-auto w-5 h-5 text-white/15" />
+                        <div>
+                          <Link
+                            href={blogLink}
+                            rel="noopener noreferrer"
+                            className="flex items-center bg-purple-700 rounded-lg h-8 w-[7.2rem] scale-95 hover:scale-100 hover:text-black transition-all duration-300"
+                          >
+                            <BookOpen size={18} className="mx-2" />
+                            <span className="text-sm">Read more</span>
+                          </Link>
+                        </div>
+                      </div>
                     </div>
-                    <Link
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center border rounded-full p-2 text-white font-semibold ml-2"
-                    >
-                      <span className="text-violet-500 font-bold">Code</span>
-                      <FaLocationArrow className="ms-3 mr-2" color="#CBACF9" />
-                    </Link>
                   </div>
-                </PinContainer>
+                </div>
               </div>
             )
           )}

@@ -1,12 +1,17 @@
 export const projects = [
   {
     id: 1,
-    title: "FilmFinder: Discover Top Movies",
-    des: "A dynamic film discovery app built with Vite, React, and Algolia, allowing users to explore top films, search favorites, and discover six visually similar recommendations using real-time search capabilities.",
-    img: "/SearchFinder.png",
-    iconLists: ["/re.svg", "/vite.svg", "/javascript-icon.svg", "/algolia.svg"],
-    link: "https://github.com/mate10106/SearchFilm",
-    livedemo: "https://search-film-theta.vercel.app/",
+    title: "Brainwave: Modern UI/UX Framework",
+    des: "Develop a cutting-edge website with Brainwave, an advanced UI/UX framework built with React.js and Tailwind CSS. Empower developers to create visually stunning, highly responsive web applications with sleek interfaces, smooth animations, and exceptional user experiences.",
+    img: "/brainwave.png",
+    iconLists: [
+      { icon: "/re.svg", label: "React" },
+      { icon: "/tail.svg", label: "Tailwind" },
+      { icon: "/icons8-javascript-48.png", label: "JavaScript" },
+    ],
+    link: "https://github.com/mate10106/brainwave",
+    livedemo: "https://brainwave-six-flame.vercel.app/",
+    blogLink: "",
   },
   {
     id: 2,
@@ -14,15 +19,16 @@ export const projects = [
     des: "Build a collaborative application by creating LiveDocs, an enhanced Google Docs that supports millions of real-time collaborators.",
     img: "/BMLiveDocs.png",
     iconLists: [
-      "/next.svg",
-      "/tail.svg",
-      "/ts.svg",
-      "/shadcn.png",
-      "/liveblocks.jpg",
-      "/c.svg",
+      { icon: "/next.svg", label: "Next.js" },
+      { icon: "/tail.svg", label: "Tailwind" },
+      { icon: "/ts.svg", label: "TypeScript" },
+      { icon: "/shadcn.png", label: "shadcn" },
+      { icon: "/liveblocks.jpg", label: "Liveblocks" },
+      { icon: "/c.svg", label: "Clerk" },
     ],
     link: "https://github.com/mate10106/bm_liveDocs/",
     livedemo: "https://bm-live-docs.vercel.app/",
+    blogLink: "/blogs/3",
   },
   {
     id: 3,
@@ -30,15 +36,16 @@ export const projects = [
     des: "Create a healthcare platform that streamlines patient registration, appointment scheduling, and medical records management. Additionally, include features for advanced forms and SMS notifications.",
     img: "/carepulse.png",
     iconLists: [
-      "/next.svg",
-      "/tail.svg",
-      "/ts.svg",
-      "/shadcn.png",
-      "/appwrite.svg",
-      "/twilio.svg",
+      { icon: "/next.svg", label: "Next.js" },
+      { icon: "/tail.svg", label: "Tailwind" },
+      { icon: "/ts.svg", label: "TypeScript" },
+      { icon: "/shadcn.png", label: "shadcn" },
+      { icon: "/appwrite.svg", label: "Appwrite" },
+      { icon: "/twilio.svg", label: "Twilio" },
     ],
     link: "https://github.com/mate10106/bm_CarePulse",
     livedemo: "https://bm-care-pulse.vercel.app/",
+    blogLink: "/blogs/1",
   },
   {
     id: 4,
@@ -46,15 +53,16 @@ export const projects = [
     des: "Horizon is a modern banking platform for everyone. Connect multiple accounts, transfer funds, track spending by category, and view all transactions seamlessly.",
     img: "/bmBank.png",
     iconLists: [
-      "/next.svg",
-      "/tail.svg",
-      "/ts.svg",
-      "/shadcn.png",
-      "/appwrite.svg",
-      "/dwolla.svg",
+      { icon: "/next.svg", label: "Next.js" },
+      { icon: "/tail.svg", label: "Tailwind" },
+      { icon: "/ts.svg", label: "TypeScript" },
+      { icon: "/shadcn.png", label: "shadcn" },
+      { icon: "/appwrite.svg", label: "Appwrite" },
+      { icon: "/dwolla.svg", label: "Dwilio" },
     ],
     link: "https://github.com/mate10106/bm_banking",
     livedemo: "https://bm-banking.vercel.app/",
+    blogLink: "/blogs/2",
   },
 ];
 
@@ -186,5 +194,43 @@ export const blogs = [
     conclusion: `User feedback has been overwhelmingly positive, with testimonials highlighting the platform's intuitive interface and powerful functionality. Users have particularly praised the ease of real-time collaboration and the smooth document editing experience.
                   This positive response confirms that LiveDocs successfully fulfills our client's vision for a user-centric collaborative platform. By providing a comprehensive, intuitive interface that enhances productivity and streamlines teamwork, we've delivered a solution that truly transforms how teams work together.
                   The success of LiveDocs showcases our ability to create innovative, user-focused solutions that not only meet technical requirements but also significantly enhance the collaborative work experience. It represents a leap forward in document collaboration technology, empowering teams to achieve unprecedented levels of productivity and efficiency.`,
+  },
+];
+
+export const SocialButtons = [
+  {
+    id: 1,
+    href: "https://github.com/mate10106",
+    icon: "/github-mark-white.png",
+    label: "Github",
+    target: "_blank",
+  },
+  {
+    id: 2,
+    href: "https://linkedin.com/in/brösztl-máté/",
+    icon: "/LI-In-Bug.png",
+    label: "LinkedIn",
+    target: "_blank",
+  },
+  {
+    id: 3,
+    href: "/blogs",
+    icon: "/blog-svgrepo-com.svg",
+    label: "Blogs",
+    target: "_self",
+  },
+  {
+    id: 4,
+    href: "/Önéletrajz.pdf",
+    icon: "/flag-hu.svg",
+    label: "CV",
+    target: "_blank",
+  },
+  {
+    id: 5,
+    href: "/ResumeENG.pdf",
+    icon: "/uk-flag.svg",
+    label: "CV",
+    target: "_blank",
   },
 ];

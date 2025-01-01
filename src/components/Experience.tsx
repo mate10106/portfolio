@@ -3,13 +3,12 @@
 import { Tabs } from "./ui/tabs";
 
 export function Experience() {
-  <></>;
   const tabs = [
     {
       title: "Frontend",
       value: "Frontend",
       content: (
-        <div className="w-full max-lg:text-center overflow-hidden relative h-96 rounded-2xl p-10 text-2xl max-sm:text-sm lg:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full max-lg:text-center overflow-hidden relative h-96 rounded-2xl p-10 text-2xl max-sm:text-xs lg:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p className="experience--title">Frontend Development</p>
           <FrontendContent />
         </div>

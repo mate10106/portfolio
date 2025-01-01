@@ -40,7 +40,7 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar h-14 max-w-full w-full",
           containerClassName
         )}
       >
@@ -68,7 +68,7 @@ export const Tabs = ({
               />
             )}
 
-            <span className="relative block text-black font-bold font-extrabold dark:text-white">
+            <span className="relative block text-black font-bold dark:text-white">
               {tab.title}
             </span>
           </button>

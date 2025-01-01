@@ -36,9 +36,7 @@ const Contact = () => {
   return (
     <div className="mt-32 max-sm:mt-8 pb-12 opacity-0" id="contact">
       <div className="text-center">
-        <p className="text-violet-500 font-sans font-thin text-lg mb-4">
-          Get in Touch
-        </p>
+        <p className="text-violet-500 font-sans text-lg mb-4">Get in Touch</p>
         <h1 className="text-3xl text-white font-bold">Contact Me</h1>
       </div>
       <div className="p-14 flex justify-center">
@@ -51,7 +49,7 @@ const Contact = () => {
         </button>
       </div>
       <div className="flex justify-between items-center text-white m-4">
-        <p>Copyright © 2024 Máté Brösztl</p>
+        <p>Copyright © 2025 Máté Brösztl</p>
         <div className="futter-links">
           <a
             href="https://github.com/mate10106"

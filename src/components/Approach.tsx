@@ -42,7 +42,7 @@ const Approach = () => {
 
   return (
     <div id="approach" className="opacity-0 mt-24 max-lg:mt-12">
-      <h1 className="text-center text-gray-200 font-serif text-3xl mb-6 font-bold">
+      <h1 className="text-center text-gray-200 text-3xl mb-6 font-bold">
         My <span className="text-violet-600 "> approach</span>
       </h1>
       <div>
