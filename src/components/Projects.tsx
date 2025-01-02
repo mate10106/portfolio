@@ -22,11 +22,11 @@ const Projects = () => {
   return (
     <div>
       <div id="project" className="opacity-0 p-8">
-        <h1 className="font-bold text-4xl mb-4 text-center text-gray-200">
+        <h1 className="font-bold text-4xl max-sm:text-3xl mb-4 text-center text-gray-200">
           A small selection of{" "}
           <span className="text-violet-600">recent projects</span>
         </h1>
-        <div className="lg:mt-20 max-lg:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto max-lg:w-96">
+        <div className="max-sm:m-0 max-sm:p-0lg:mt-20 max-lg:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 max-lg:w-96 max-md:w-full mx-auto">
           {projects.map(
             ({ id, title, des, img, iconLists, link, livedemo, blogLink }) => (
               <div
@@ -69,16 +69,18 @@ const Projects = () => {
                           </TechIcon>
                         ))}
                       </div>
-                      <div className="ml-4 space-y-3">
-                        <div>
+                      <div className="ml-4 space-y-3 max-[410px]:ml-4 max-[410px]:space-y-5">
+                        <div className="flex justify-end">
                           <Link
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center bg-purple-700 rounded-lg h-8 w-[7.2rem] scale-95 hover:scale-100 hover:text-black transition-all duration-300"
+                            className="flex items-center bg-purple-700 rounded-lg h-8 w-[7.2rem] max-[410px]:w-[2.1rem] scale-95 hover:scale-100 hover:text-black transition-all duration-300"
                           >
                             <CodeIcon size={18} className="mx-2" />
-                            <span className="text-sm">View Code</span>
+                            <span className="text-sm max-[410px]:hidden">
+                              View Code
+                            </span>
                           </Link>
                         </div>
                         <X className="flex mx-auto w-5 h-5 text-white/15" />
@@ -88,20 +90,24 @@ const Projects = () => {
                               href={blogLink}
                               rel="noopener noreferrer"
                               className={clsx(
-                                "flex items-center bg-purple-700 rounded-lg h-8 w-[7.2rem] scale-95 hover:scale-100 hover:text-black transition-all duration-300"
+                                "flex items-center bg-purple-700 max-[410px]:w-[2.1rem] rounded-lg h-8 w-[7.2rem] scale-95 hover:scale-100 hover:text-black transition-all duration-300"
                               )}
                             >
                               <BookOpen size={18} className="mx-2" />
-                              <span className="text-sm">Read more</span>
+                              <span className="text-sm max-[410px]:hidden">
+                                Read more
+                              </span>
                             </Link>
                           ) : (
                             <div
                               className={clsx(
-                                "flex items-center bg-gray-500 rounded-lg h-8 w-[7.2rem] scale-95 cursor-not-allowed text-gray-300"
+                                "flex items-center bg-gray-500 max-[410px]:w-[2.1rem] rounded-lg h-8 w-[7.2rem] scale-95 cursor-not-allowed text-gray-300"
                               )}
                             >
                               <BookOpen size={18} className="mx-2" />
-                              <span className="text-base">No blog</span>
+                              <span className="text-base max-[410px]:hidden">
+                                No blog
+                              </span>
                             </div>
                           )}
                         </div>

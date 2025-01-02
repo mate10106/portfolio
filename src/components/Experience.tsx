@@ -49,7 +49,7 @@ export function Experience() {
   return (
     <div
       id="experience"
-      className="h-[30rem] md:h-[30rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-10"
+      className="h-[30rem] md:h-[30rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-10 max-sm:my-7"
     >
       <Tabs tabs={tabs} />
     </div>
